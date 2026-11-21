@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerriero Fitness 2023 - Promozioni Black Friday & Area Clienti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --bg-card: #141418;
+            --bg-elevated: #1c1c22;
+            --accent-red: #e50914;
+            --accent-red-glow: rgba(229, 9, 20, 0.45);
+            --accent-gold: #f5c542;
+            --accent-gold-dark: #c9971c;
+            --text-light: #ffffff;
+            --text-muted: #b3b3b8;
+            --border-subtle: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.16) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(245, 197, 66, 0.14) 0%, transparent 45%);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 12, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0.85rem 1.5rem;
+        }
+
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            text-decoration: none;
+            color: var(--text-light);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        .nav-brand svg {
+            width: 38px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-btn-area {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: #0a0a0c !important;
+            padding: 0.45rem 0.95rem;
+            border-radius: 6px;
+            font-weight: 700 !important;
+        }
+
+        /* Header & Logo */
+        header {
+            text-align: center;
+            padding: 3rem 1.5rem 2.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(180deg, rgba(20, 20, 24, 0.96) 0%, rgba(10, 10, 12, 0.85) 100%);
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-logo svg {
+            width: 145px;
+            height: auto;
+            filter: drop-shadow(0 4px 18px rgba(255, 255, 255, 0.12));
+            margin-bottom: 0.6rem;
+        }
+
+        .brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.55rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .brand-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 6.5px;
+            color: #e0e0e5;
+            margin-top: 0.25rem;
+            padding-left: 6.5px;
+        }
+
+        .badge-bf {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-red), #b0060f);
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            padding: 0.45rem 1.4rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 24px var(--accent-red-glow);
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 span {
+            color: var(--accent-gold);
+        }
+
+        header p {
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1120px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            flex: 1;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 2.25rem;
+        }
+
+        .section-heading .tag {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-heading h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .promos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 2.5rem;
+            align-items: stretch;
+        }
+
+        .promo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
+            position: relative;
+        }
+
+        .promo-card.featured {
+            border: 1.5px solid rgba(245, 197, 66, 0.55);
+        }
+
+        .promo-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 197, 66, 0.75);
+            box-shadow: 0 18px 42px rgba(229, 9, 20, 0.25);
+        }
+
+        .promo-banner-top {
+            background: linear-gradient(135deg, #1b0507 0%, #2d080c 50%, #141418 100%);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        .promo-banner-top.gold-accent {
+            background: linear-gradient(135deg, #1f1705 0%, #332507 50%, #141418 100%);
+        }
+
+        .bf-tag-inline {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.25rem 0.9rem;
+            border: 1.5px solid var(--accent-gold);
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .bf-tag-inline span {
+            color: var(--accent-red);
+        }
+
+        .promo-price-hero {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(180deg, #ffe382 0%, #f5c542 55%, #b88414 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 12px rgba(245, 197, 66, 0.25));
+            margin: 0.4rem 0;
+        }
+
+        .promo-duration-pill {
+            display: inline-block;
+            background: var(--accent-red);
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            padding: 0.2rem 1.1rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-top: 0.35rem;
+        }
+
+        .promo-date-hero {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.35rem;
+            font-weight: 700;
+            color: #0a0a0c;
+            background: linear-gradient(135deg, #ffe382, #f5c542);
+            padding: 0.45rem 1.25rem;
+            border-radius: 6px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0.65rem 0 0.35rem;
+            box-shadow: 0 4px 18px rgba(245, 197, 66, 0.3);
+        }
+
+        .promo-body {
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .promo-tag {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.4rem;
+        }
+
+        .promo-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            line-height: 1.2;
+        }
+
+        .promo-desc {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .promo-features {
+            list-style: none;
+            margin-bottom: 1.75rem;
+        }
+
+        .promo-features li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.55rem;
+            font-size: 0.92rem;
+            color: #e4e4e7;
+        }
+
+        .promo-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, var(--accent-red), #b50710);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 4px 16px var(--accent-red-glow);
+            font-size: 0.95rem;
+        }
+
+        .btn-cta.gold {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: #0a0a0c;
+            box-shadow: 0 4px 16px rgba(245, 197, 66, 0.35);
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.02);
+            filter: brightness(1.08);
+        }
+
+        /* Area Clienti Section */
+        .client-area-section {
+            margin-top: 4.5rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(245, 197, 66, 0.35);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .login-box {
+            max-width: 460px;
+            margin: 0 auto;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 0.95rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: #0e0e12;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .login-hint {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Dashboard (visibile dopo accesso) */
+        .dashboard {
+            display: none;
+            animation: fadeIn 0.35s ease;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dash-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.75rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .dash-user h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.65rem;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        .dash-user p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .btn-logout {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            padding: 0.55rem 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-logout:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .dash-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dash-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .dash-card h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.16);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.4);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            margin-bottom: 0.65rem;
+        }
+
+        .workout-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #e4e4e7;
+        }
+
+        .workout-list li {
+            padding: 0.45rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .workout-list li:last-child {
+            border-bottom: none;
+        }
+
+        .checkin-row {
+            display: flex;
+            gap: 0.65rem;
+            margin-top: 1rem;
+        }
+
+        .checkin-row input {
+            flex: 1;
+            padding: 0.65rem 0.85rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: #0e0e12;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+        }
+
+        .checkin-row button {
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            border: none;
+            background: var(--accent-gold);
+            color: #0a0a0c;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+        }
+
+        /* Banner informativo */
+        .flyer-note {
+            margin-top: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(245, 197, 66, 0.28);
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            text-align: center;
+        }
+
+        .flyer-note h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.45rem;
+            font-size: 1.4rem;
+        }
+
+        .flyer-note p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#top" class="nav-brand">
+                <svg viewBox="0 0 260 155" xmlns="http://www.w3.org/2000/svg" aria-label="Logo GF">
+                    <polygon points="36,10 124,10 124,36 46,36 28,53 102,126 102,82 70,82 54,66 124,66 124,148 106,148 8,50" fill="#ffffff"/>
+                    <polygon points="136,10 224,10 252,38 196,38 182,24 162,24 162,56 232,56 206,82 162,82 162,124 136,148" fill="#ffffff"/>
+                </svg>
+                <span>GUERRIERO FITNESS 2023</span>
+            </a>
+            <div class="nav-links">
+                <a href="#promozioni">Promozioni</a>
+                <a href="#area-clienti" class="nav-btn-area">Area Clienti</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top">
+        <!-- Logo Vettoriale GF Guerriero Fitness 2023 -->
+        <div class="brand-logo">
+            <svg viewBox="0 0 260 155" xmlns="http://www.w3.org/2000/svg" aria-label="Logo GF Guerriero Fitness 2023">
+                <polygon points="36,10 124,10 124,36 46,36 28,53 102,126 102,82 70,82 54,66 124,66 124,148 106,148 8,50" fill="#ffffff"/>
+                <polygon points="136,10 224,10 252,38 196,38 182,24 162,24 162,56 232,56 206,82 162,82 162,124 136,148" fill="#ffffff"/>
+            </svg>
+            <div class="brand-title">GUERRIERO</div>
+            <div class="brand-subtitle">FITNESS 2023</div>
+        </div>
+
+        <div class="badge-bf">Promozioni Black Friday</div>
+        <h1>Preparati a cambiare <span>il tuo allenamento</span></h1>
+        <p>Approfitta delle offerte esclusive Black Friday firmate <strong>Guerriero Fitness 2023</strong> e accedi alla tua Area Clienti.</p>
+    </header>
+
+    <main>
+        <!-- Sezione Promozioni -->
+        <section id="promozioni">
+            <div class="section-heading">
+                <span class="tag">Offerte Attive</span>
+                <h2>Promozioni Black Friday</h2>
+            </div>
+
+            <div class="promos-grid">
+                <!-- Promozione 1 -->
+                <article class="promo-card featured">
+                    <div class="promo-banner-top gold-accent">
+                        <div class="bf-tag-inline">BLACK <span>FRIDAY</span></div>
+                        <div class="promo-duration-pill">Abbonamento Sala 10 Mesi</div>
+                        <div class="promo-price-hero">99,90€</div>
+                    </div>
+                    <div class="promo-body">
+                        <div>
+                            <div class="promo-tag">Offerta Imperdibile</div>
+                            <h3 class="promo-title">Abbonamento Sala — 10 Mesi</h3>
+                            <p class="promo-desc">Allenati per 10 mesi ad un prezzo irripetibile. L'occasione ideale per iniziare il tuo percorso o portare i tuoi risultati al livello successivo.</p>
+                            <ul class="promo-features">
+                                <li>Accesso completo alla sala pesi per 10 mesi</li>
+                                <li>Prezzo bloccato a soli <strong>99,90€</strong></li>
+                                <li>Disponibilità limitata fino ad esaurimento posti</li>
+                            </ul>
+                        </div>
+                        <a href="#area-clienti" class="btn-cta gold" onclick="selectPromo('Abbonamento Sala 10 Mesi — 99,90€')">Blocca l'Offerta a 99,90€</a>
+                    </div>
+                </article>
+
+                <!-- Promozione 2 -->
+                <article class="promo-card">
+                    <div class="promo-banner-top">
+                        <div class="bf-tag-inline">BLACK <span>FRIDAY</span></div>
+                        <div style="font-family: 'Oswald', sans-serif; font-size: 1.35rem; letter-spacing: 1px; text-transform: uppercase; margin-top: 0.25rem;">Offerta Speciale</div>
+                        <div class="promo-date-hero">Fino al 30 Novembre</div>
+                    </div>
+                    <div class="promo-body">
+                        <div>
+                            <div class="promo-tag">Scadenza Imminente</div>
+                            <h3 class="promo-title">Offerta Speciale Black Friday</h3>
+                            <p class="promo-desc">Preparati a cambiare il tuo allenamento con le promozioni dedicate di novembre presso Guerriero Fitness 2023.</p>
+                            <ul class="promo-features">
+                                <li>Promozione valida esclusivamente <strong>fino al 30 Novembre</strong></li>
+                                <li>Pacchetti esclusivi pensati per ogni obiettivo</li>
+                                <li>Consulenza dedicata in sede con il nostro staff</li>
+                            </ul>
+                        </div>
+                        <a href="#area-clienti" class="btn-cta" onclick="selectPromo('Offerta Speciale Black Friday (Fino al 30 Novembre)')">Scopri e Prenota in Area Clienti</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sezione Area Clienti -->
+        <section id="area-clienti" class="client-area-section">
+            <div class="section-heading">
+                <span class="tag">Portale Riservato</span>
+                <h2>Area Clienti</h2>
+            </div>
+
+            <!-- Form di Login -->
+            <div id="loginBox" class="login-box">
+                <form id="clientLoginForm">
+                    <div class="form-group">
+                        <label for="clientName">Nome e Cognome</label>
+                        <input type="text" id="clientName" placeholder="Es. Marco Rossi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientEmail">Email o Numero Tessera</label>
+                        <input type="text" id="clientEmail" placeholder="marco@esempio.it o GF-2026-01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="promoInterest">Promozione / Abbonamento di Interesse</label>
+                        <select id="promoInterest">
+                            <option value="Abbonamento Sala 10 Mesi — 99,90€">Abbonamento Sala 10 Mesi — 99,90€</option>
+                            <option value="Offerta Speciale Black Friday (Fino al 30 Novembre)">Offerta Speciale Black Friday (Fino al 30 Novembre)</option>
+                            <option value="Abbonamento Attivo / Rinnovo">Abbonamento Attivo / Rinnovo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-cta gold">Accedi all'Area Clienti</button>
+                </form>
+                <p class="login-hint">Inserisci i tuoi dati per visualizzare stato abbonamento, scheda e prenotazioni.</p>
+            </div>
+
+            <!-- Dashboard Cliente -->
+            <div id="clientDashboard" class="dashboard">
+                <div class="dash-top">
+                    <div class="dash-user">
+                        <h3>Ciao, <span id="dashClientName">Atleta</span></h3>
+                        <p id="dashClientMeta">Profilo attivo • Guerriero Fitness 2023</p>
+                    </div>
+                    <button type="button" class="btn-logout" onclick="logoutClient()">Esci</button>
+                </div>
+
+                <div class="dash-grid">
+                    <!-- Stato Abbonamento & Promo -->
+                    <div class="dash-card">
+                        <h4>Abbonamento & Promo</h4>
+                        <span class="status-badge">Attivo / Riservato</span>
+                        <p style="font-size: 0.92rem; color: #e4e4e7; margin-bottom: 0.5rem;">
+                            <strong>Selezione:</strong> <span id="dashPromoName">Abbonamento Sala 10 Mesi — 99,90€</span>
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">
+                            Validità offerta Black Friday: <strong>Fino al 30 Novembre</strong>. Presenta il tuo nominativo in reception per completare l'attivazione.
+                        </p>
+                    </div>
+
+                    <!-- Scheda Allenamento Rapida -->
+                    <div class="dash-card">
+                        <h4>Scheda Allenamento</h4>
+                        <ul class="workout-list">
+                            <li><span>Giorno A — Petto & Spalle</span><strong>45 min</strong></li>
+                            <li><span>Giorno B — Dorso & Braccia</span><strong>50 min</strong></li>
+                            <li><span>Giorno C — Gambe & Core</span><strong>55 min</strong></li>
+                        </ul>
+                    </div>
+
+                    <!-- Appunti / Check-in -->
+                    <div class="dash-card">
+                        <h4>Note & Prenotazione Consulenza</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">
+                            Lascia una nota o la fascia oraria preferita per parlare con il team:
+                        </p>
+                        <div class="checkin-row">
+                            <input type="text" id="noteInput" placeholder="Es. Passo domani alle 18:00...">
+                            <button type="button" onclick="saveNote()">Salva</button>
+                        </div>
+                        <p id="savedNoteDisplay" style="margin-top: 0.75rem; font-size: 0.86rem; color: var(--accent-gold);"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flyer-note">
+            <h3>Non perdere l'occasione — Valido fino al 30 Novembre</h3>
+            <p>Vieni a trovarci in reception presso <strong>Guerriero Fitness 2023</strong> per attivare subito la tua promozione Black Friday.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <strong>GUERRIERO FITNESS 2023</strong> — Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function selectPromo(promoLabel) {
+            const selectEl = document.getElementById('promoInterest');
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value === promoLabel) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            const dashPromoEl = document.getElementById('dashPromoName');
+            if (dashPromoEl) {
+                dashPromoEl.textContent = promoLabel;
+            }
+        }
+
+        document.getElementById('clientLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value.trim() || 'Atleta';
+            const emailOrId = document.getElementById('clientEmail').value.trim();
+            const promo = document.getElementById('promoInterest').value;
+
+            localStorage.setItem('gf_client_name', name);
+            localStorage.setItem('gf_client_id', emailOrId);
+            localStorage.setItem('gf_client_promo', promo);
+
+            renderDashboard(name, emailOrId, promo);
+        });
+
+        function renderDashboard(name, emailOrId, promo) {
+            document.getElementById('dashClientName').textContent = name;
+            document.getElementById('dashClientMeta').textContent = emailOrId
+                ? `ID / Email: ${emailOrId} • Guerriero Fitness 2023`
+                : 'Profilo attivo • Guerriero Fitness 2023';
+            document.getElementById('dashPromoName').textContent = promo;
+
+            const savedNote = localStorage.getItem('gf_client_note');
+            document.getElementById('savedNoteDisplay').textContent = savedNote
+                ? `Nota salvata: "${savedNote}"`
+                : '';
+
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('clientDashboard').classList.add('active');
+        }
+
+        function saveNote() {
+            const noteVal = document.getElementById('noteInput').value.trim();
+            if (!noteVal) return;
+            localStorage.setItem('gf_client_note', noteVal);
+            document.getElementById('savedNoteDisplay').textContent = `Nota salvata: "${noteVal}"`;
+            document.getElementById('noteInput').value = '';
+        }
+
+        function logoutClient() {
+            document.getElementById('clientDashboard').classList.remove('active');
+            document.getElementById('loginBox').style.display = 'block';
+        }
+
+        // Ripristina sessione se già salvata nel browser
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedName = localStorage.getItem('gf_client_name');
+            const savedId = localStorage.getItem('gf_client_id');
+            const savedPromo = localStorage.getItem('gf_client_promo');
+            if (savedName) {
+                renderDashboard(savedName, savedId || '', savedPromo || 'Abbonamento Sala 10 Mesi — 99,90€');
+            }
+        });
+    </script>
+
+</body>
+</html>
